@@ -16,13 +16,17 @@ import io.github.neas.ExportedAliyunCredentials
 buildCache {
   registerBuildCacheService(AliyunBuildCache::class, AliyunBuildCacheServiceFactory::class)
   remote(AliyunBuildCache::class) {
-    region = "your-aliyun-oss-endpoint"
+    endpoint = "your-aliyun-oss-endpoint"
     bucketName = "bucket-name"
     credentials = ExportedS3Credentials("your-access-key-id", "your-secret-key")
     isPush = System.getenv().containsKey("CI")
   }
 }
 ```
+
+`endpoint` and `bucketName` are required.  
+credentials can queried from aliyun oss website.  
+`isPush` defaults to false
 
 groovy
 ```groovy
