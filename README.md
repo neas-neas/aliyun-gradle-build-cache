@@ -18,7 +18,7 @@ buildCache {
   remote(AliyunBuildCache::class) {
     endpoint = "your-aliyun-oss-endpoint"
     bucketName = "bucket-name"
-    credentials = ExportedS3Credentials("your-access-key-id", "your-secret-key")
+    credentials = ExportedAliyunCredentials("your-access-key-id", "your-secret-key")
     isPush = System.getenv().containsKey("CI")
   }
 }
