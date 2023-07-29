@@ -1,8 +1,8 @@
-# 基于阿里云OSS的Gradle Remote Cache
+# Aliyun OSS backed Gradle Remote Cache
 
-使用方式
+## Usage
 
-在settings.gradle(.kts)文件添加如下
+In your settings.gradle(.kts) file add the following
 
 ```kotlin
 plugins {
