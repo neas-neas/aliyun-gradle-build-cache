@@ -1,8 +1,8 @@
-# 基于阿里云OSS的Gradle Remote Cache
+# Aliyun OSS backed Gradle Remote Cache
 
-使用方式
+## Usage
 
-在settings.gradle(.kts)文件添加如下
+In your settings.gradle(.kts) file add the following
 
 ```kotlin
 plugins {
@@ -16,13 +16,17 @@ import io.github.neas.ExportedAliyunCredentials
 buildCache {
   registerBuildCacheService(AliyunBuildCache::class, AliyunBuildCacheServiceFactory::class)
   remote(AliyunBuildCache::class) {
-    region = "your-aliyun-oss-endpoint"
+    endpoint = "your-aliyun-oss-endpoint"
     bucketName = "bucket-name"
     credentials = ExportedS3Credentials("your-access-key-id", "your-secret-key")
     isPush = System.getenv().containsKey("CI")
   }
 }
 ```
+
+`endpoint` and `bucketName` are required.  
+credentials can queried from aliyun oss website.  
+`isPush` defaults to false
 
 groovy
 ```groovy
