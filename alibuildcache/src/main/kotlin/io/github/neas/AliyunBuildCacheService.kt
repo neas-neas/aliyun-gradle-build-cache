@@ -96,7 +96,7 @@ internal class AliyunBuildCacheService(
                 DefaultAliyunCredentials -> CredentialsProviderFactory.newSystemPropertiesCredentialsProvider()
                 is SpecificCredentialsProvider -> aliyunCredentials.provider
                 is ExportedAliyunCredentials -> CredentialsProviderFactory.newDefaultCredentialProvider(
-                    aliyunCredentials.awsAccessKeyId, aliyunCredentials.awsSecretKey
+                    aliyunCredentials.accessKeyId, aliyunCredentials.secretAccessKey
                 )
             }
         }

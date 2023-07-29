@@ -38,4 +38,4 @@ class SpecificCredentialsProvider(val provider: CredentialsProvider) : AliyunCre
 /**
  * Use provided keys to authenticate to Aliyun.
  */
-class ExportedAliyunCredentials(val awsAccessKeyId: String, val awsSecretKey: String) : AliyunCredentials
+class ExportedAliyunCredentials(val accessKeyId: String, val secretAccessKey: String) : AliyunCredentials
