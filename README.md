@@ -51,3 +51,15 @@ buildCache {
     }
 }
 ```
+apply plugin(the old way)
+```groovy
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'io.github.neas-neas:alibuildcache:1.0.0'
+    }
+}
+apply plugin: 'io.github.neas-neas.alibuildcache'
+```
