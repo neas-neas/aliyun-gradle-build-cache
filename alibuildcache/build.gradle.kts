@@ -20,6 +20,7 @@ plugins {
     id("signing")
     id("com.gradle.plugin-publish") version "1.1.0"
     id("org.jetbrains.kotlin.jvm") version "1.7.10"
+    id("com.vanniktech.maven.publish") version "0.25.3"
 }
 
 dependencies {
