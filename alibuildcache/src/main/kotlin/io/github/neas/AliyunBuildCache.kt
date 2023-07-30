@@ -26,14 +26,9 @@ import io.github.neas.core.RemoteGradleBuildCache
 abstract class AliyunBuildCache(
 ) : RemoteGradleBuildCache() {
     /**
-     * The AWS region the S3 bucket is located in.
+     * The Aliyun OSS endpoint where bucket is located in.
      */
     lateinit var endpoint: String
-
-    /**
-     * Whether to use reduced redundancy.
-     * */
-    var reducedRedundancy: Boolean = true
 
     /**
      * The type of credentials to use to connect to Aliyun.

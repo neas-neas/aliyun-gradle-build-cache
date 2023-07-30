@@ -32,7 +32,6 @@ class AliyunBuildCacheServiceFactory : BuildCacheServiceFactory<AliyunBuildCache
             .type("Aliyun-backed")
             .config("endpoint", buildCache.endpoint)
             .config("bucketName", buildCache.bucketName)
-            .config("reducedRedundancy", "${buildCache.reducedRedundancy}")
             .config("isPushSupported", "${buildCache.isPush}")
             .config("isEnabled", "${buildCache.isEnabled}")
             .config("credentialsType", "${buildCache.credentials}")
