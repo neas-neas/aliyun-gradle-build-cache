@@ -1,5 +1,8 @@
 # Aliyun OSS backed Gradle Remote Cache
 
+inspired by [gcp-gradle-build-cache
+](https://github.com/androidx/gcp-gradle-build-cache)
+
 ## Usage
 
 In your settings.gradle(.kts) file add the following
